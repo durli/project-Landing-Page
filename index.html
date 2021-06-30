@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- bg-image is merely used to add image to the background. -->
+    <div class="bg-image"></div>
+    <div class="container">
+      <header>
+        <div id="social">
+          <a href="#"
+            ><img src="images/facebook_icon.png" alt="" id="facebook"
+          /></a>
+          <a href="#"
+            ><img src="images/instagram_icon.png" alt="" id="instagram"
+          /></a>
+          <a href="#"
+            ><img src="images/youtube_icon.png" alt="" id="youtube"
+          /></a>
+        </div>
+        <div id="logo">
+          <a href="#"><img src="images/logo2.png" alt="logo" /></a>
+        </div>
+        <div id="navbar">
+          <button class="navbar" onclick="dropdown()">
+            <img src="images/menu.png" alt="" />
+          </button>
+          <div id="dropdownMenu">
+            <div id="collapse" onclick="collapse()"><button>X</button></div>
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About Us</a></div>
+            <div><a href="#">Photography</a></div>
+            <div><a href="#">Contact Us</a></div>
+          </div>
+        </div>
+      </header>
+      <div class="intro">
+        <div id="description">
+          <p class="heading">Alex <strong>Photon</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            ratione illum reiciendis libero repellendus a pariatur ab dolores
+            nihil, quasi perferendis illo. Ea beatae dolores illo odio, numquam
+            quo tempore laboriosam eius non voluptate ipsam, et architecto
+            veniam quia ad.
+          </p>
+        </div>
+        <div class="btnBlock">
+          <button class="btn">All</button>
+          <button class="btn">Commercial</button>
+          <button class="btn">Photography</button>
+          <button class="btn">Mock ups</button>
+          <button class="btn">Tech</button>
+          <button class="btn">Art</button>
+          <button class="btn">Button 7</button>
+          <button class="btn">Button 8</button>
+        </div>
+      </div>
+      <div class="fixedmenu">
+        <div id="item-3">
+          <a href="#" class="cart"><img src="images/cart.png" alt="" /></a>
+        </div>
+        <div id="item-1">
+          <a href="#" class="whatsapp"
+            ><img src="images/whatsapp.png" alt=""
+          /></a>
+        </div>
+        <div id="item-2">
+          <a href="#" class="message"
+            ><img src="images/message.png" alt=""
+          /></a>
+        </div>
+        <div id="item-4">
+          <a href="#" class="question"
+            ><img src="images/question.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="photoGrid">
+        <div id="photo-1">
+          <img src="images/isaac-quesada-KNEKN2Fbzdk-unsplash.jpg" alt="" />
+        </div>
+        <div id="photo-2">
+          <img src="images/xu-duo-DK5v4hXwQhw-unsplash.jpg" alt="" />
+        </div>
+        <div id="photo-3">
+          <img src="images/isaac-quesada-kWj6163pUVM-unsplash.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+    <script>
+      // document.querySelector('.heading').innerHTML = 'Hi everyone';
+
+      function adjustHeight() {
+        var height1 = document.querySelector(".intro").offsetHeight;
+        height1 = height1 * 1.5;
+        height1 = height1 + "px";
+        document.querySelector(".bg-image").style.height = height1;
+        var height2 = document.querySelector(".bg-image").style.height;
+      }
+      setInterval(adjustHeight, 100);
+      function dropdown() {
+        dropdownMenu.style.display = "flex";
+        document.querySelector("button.navbar").style.display = "none";
+      }
+
+      function collapse() {
+        dropdownMenu.style.display = "none";
+        document.querySelector("button.navbar").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
